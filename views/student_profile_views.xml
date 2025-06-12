@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Tree View -->
+    <record id="view_student_profile_tree" model="ir.ui.view">
+        <field name="name">student.profile.tree</field>
+        <field name="model">student.profile</field>
+        <field name="arch" type="xml">
+            <tree string="Student Profiles">
+                <field name="student_id"/>
+                <field name="name"/> <!-- from res.partner -->
+                <field name="email"/> <!-- from res.partner -->
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_student_profile_form" model="ir.ui.view">
+        <field name="name">student.profile.form</field>
+        <field name="model">student.profile</field>
+        <field name="arch" type="xml">
+            <form string="Student Profile">
+                <sheet>
+                    <group>
+                        <field name="student_id"/>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_student_profile" model="ir.actions.act_window">
+        <field name="name">Student Profiles</field>
+        <field name="res_model">student.profile</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_student_profile_root" name="Student Profile records"/>
+    <menuitem id="menu_student_profile" name="Student Profiles" parent="menu_student_profile_root" action="action_student_profile"/>
+
+</odoo>

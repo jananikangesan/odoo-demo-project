@@ -10,7 +10,9 @@
                 <field name="name"/>
                 <field name="address"/>
                 <field name="email"/>
-<!--                <field name="phone"/>-->
+                <field name="phone"/>
+                <field name="date_of_birth"/>
+                <field name="gender"/>
             </tree>
         </field>
     </record>
@@ -27,6 +29,8 @@
                         <field name="address"/>
                         <field name="phone"/>
                         <field name="email"/>
+                        <field name="date_of_birth"/>
+                        <field name="gender"/>
                     </group>
                 </sheet>
             </form>

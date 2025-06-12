@@ -6,10 +6,11 @@
     'author': 'Your Name',
     'license': 'LGPL-3',
     'category': 'Tools',
-    'depends': ['base'],
+    'depends': ['base','contacts'],
     'data': [
         'security/ir.model.access.csv',
         'views/student_record_view.xml',
+        'views/student_profile_views.xml',
     ],
     'installable': True,
     'application': True,
